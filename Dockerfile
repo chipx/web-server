@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install -y php5-common php5-curl\
 RUN apt-get update && apt-get install -y supervisor
 RUN apt-get clean
 COPY supervisor.conf /etc/supervisor/conf.d/web.conf
-VOLUME ["/etc/nginx/vhosts", "/var/www", "/var/log/nginx"]
+VOLUME ["/etc/nginx/vhosts", "/var/www", "/var/log/nginx", "/etc/php5/mods-available"]
 
-EXPOSE 80 443 9002
+EXPOSE 80 443 9009
